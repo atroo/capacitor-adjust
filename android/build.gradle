@@ -3,6 +3,9 @@ ext {
     androidxAppCompatVersion = project.hasProperty('androidxAppCompatVersion') ? rootProject.ext.androidxAppCompatVersion : '1.7.0'
     androidxJunitVersion = project.hasProperty('androidxJunitVersion') ? rootProject.ext.androidxJunitVersion : '1.2.1'
     androidxEspressoCoreVersion = project.hasProperty('androidxEspressoCoreVersion') ? rootProject.ext.androidxEspressoCoreVersion : '3.6.1'
+    adjustSdkVersion = project.hasProperty('adjustSdkVersion') ? rootProject.ext.adjustSdkVersion : '5.3.0'
+    installreferrerVersion = project.hasProperty('installreferrerVersion') ? rootProject.ext.installreferrerVersion : '2.2'
+    playServicesAdsIdentifierVersion = project.hasProperty('playServicesAdsIdentifierVersion') ? rootProject.ext.playServicesAdsIdentifierVersion : '18.2.0'
 }
 
 buildscript {
@@ -52,6 +55,12 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    //adjust sdk
+    implementation "com.adjust.sdk:adjust-android:$adjustSdkVersion"
+    implementation "com.android.installreferrer:installreferrer:$installreferrerVersion"
+    // Add the following if you are using the Adjust SDK inside web views on your app
+    implementation "com.adjust.sdk:adjust-android-webbridge:$adjustSdkVersion"
+    implementation "com.google.android.gms:play-services-ads-identifier:$playServicesAdsIdentifierVersion"
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
