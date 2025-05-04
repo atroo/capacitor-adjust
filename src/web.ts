@@ -33,7 +33,7 @@ export class AdjustWeb extends WebPlugin implements AdjustPlugin {
 
   async trackEvent(options: AdjustEventOptions): Promise<void> {
     const { eventToken, revenue, currency, parameters } = options;
-    Adjust.trackEvent({
+    await Adjust.trackEvent({
       eventToken,
       revenue,
       currency,
