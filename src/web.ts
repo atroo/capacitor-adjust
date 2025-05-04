@@ -5,10 +5,11 @@ import type { AdjustEventOptions, AdjustPlugin, InitConfig } from './definitions
 
 export class AdjustWeb extends WebPlugin implements AdjustPlugin {
   async init(options: InitConfig): Promise<void> {
-    const { appToken, environment = 'production', logLevel: logLevelStr } = options;
+    const { appToken, environment = 'production' } = options;
+    let {logLevel: logLevelStr} = options
     let logLevel: Adjust.LogLevel | undefined;
     if (!logLevelStr) {
-      logLevel = environment === 'production' ? 'error' : 'verbose';
+      logLevelStr = environment === 'production' ? 'error' : 'verbose';
     }
     switch (logLevelStr) {
       case 'verbose':
