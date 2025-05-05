@@ -7,6 +7,7 @@ export default {
       name: 'capacitorAdjust',
       globals: {
         '@capacitor/core': 'capacitorExports',
+        '@adjustcom/adjust-web-sdk': 'adjustExports',
       },
       sourcemap: true,
       inlineDynamicImports: true,
@@ -18,5 +19,5 @@ export default {
       inlineDynamicImports: true,
     },
   ],
-  external: ['@capacitor/core'],
+  external: ['@capacitor/core', '@adjustcom/adjust-web-sdk'],
 };

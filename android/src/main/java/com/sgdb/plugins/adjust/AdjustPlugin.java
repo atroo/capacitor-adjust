@@ -34,26 +34,15 @@ public class AdjustPlugin extends Plugin {
 
         LogLevel logLevel = LogLevel.VERBOSE;
 
-        switch (logLevelStr) {
-            case "verbose":
-                logLevel = LogLevel.VERBOSE;
-                break;
-            case "info":
-                logLevel = LogLevel.INFO;
-                break;
-            case "debug":
-                logLevel = LogLevel.DEBUG;
-                break;
-            case "warn":
-                logLevel = LogLevel.WARN;
-                break;
-            case "error":
-                logLevel = LogLevel.ERROR;
-                break;
-            case "assert":
-                logLevel = LogLevel.ASSERT;
-                break;
-        }
+        logLevel = switch (logLevelStr) {
+            case "verbose" -> LogLevel.VERBOSE;
+            case "info" -> LogLevel.INFO;
+            case "debug" -> LogLevel.DEBUG;
+            case "warn" -> LogLevel.WARN;
+            case "error" -> LogLevel.ERROR;
+            case "assert" -> LogLevel.ASSERT;
+            default -> logLevel;
+        };
 
         AdjustConfig config = new AdjustConfig(context,appToken, environment);
         config.setLogLevel(logLevel);
