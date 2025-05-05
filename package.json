@@ -1,5 +1,5 @@
 {
-  "name": "@sgdb/capacitor-adjust",
+  "name": "capacitor-adjust-plugin",
   "version": "0.0.1",
   "description": "Adjust Plugins for Capacitor",
   "main": "dist/plugin.cjs.js",
