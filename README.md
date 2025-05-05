@@ -1,11 +1,11 @@
-# @sgdb/capacitor-adjust
+# capacitor-adjust-plugin
 
 Adjust Plugins for Capacitor
 
 ## Install
 
 ```bash
-npm install @sgdb/capacitor-adjust
+npm install capacitor-adjust-plugin
 npx cap sync
 ```
 
@@ -86,6 +86,8 @@ adjust custom event options
 
 Construct a type with a set of properties K of type T
 
-<code>{ [P in K]: T; }</code>
+<code>{
+ [P in K]: T;
+ }</code>
 
 </docgen-api>
