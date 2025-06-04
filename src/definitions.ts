@@ -18,6 +18,10 @@ export interface AdjustEventOptions {
   parameters: Record<string, string>;
 }
 
+export interface AdidResult {
+  adid: string;
+}
+
 export interface AdjustPlugin {
   /**
    * adjust init
@@ -27,4 +31,6 @@ export interface AdjustPlugin {
    * track custom event
    */
   trackEvent(options: AdjustEventOptions): Promise<void>
+
+  getAdid(): Promise<AdidResult>
 }

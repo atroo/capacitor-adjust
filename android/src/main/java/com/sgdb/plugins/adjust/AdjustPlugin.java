@@ -2,6 +2,7 @@ package com.sgdb.plugins.adjust;
 
 import android.content.Context;
 
+import com.adjust.sdk.OnAdidReadListener;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -72,6 +73,18 @@ public class AdjustPlugin extends Plugin {
             Adjust.trackEvent(event);
         }
         call.resolve();
+    }
+
+    @PluginMethod
+    public void getAdid(PluginCall call) {
+        Adjust.getAdid(new OnAdidReadListener() {
+            @Override
+            public void onAdidRead(String adid) {
+                JSObject ret = new JSObject();
+                ret.put("adid", adid);
+                call.resolve(ret);
+            }
+        });
     }
 
     @Override

@@ -1,7 +1,7 @@
 import Adjust from '@adjustcom/adjust-web-sdk';
 import { WebPlugin } from '@capacitor/core';
 
-import type { AdjustEventOptions, AdjustPlugin, InitConfig } from './definitions';
+import type {AdidResult, AdjustEventOptions, AdjustPlugin, InitConfig} from './definitions';
 
 export class AdjustWeb extends WebPlugin implements AdjustPlugin {
   async init(options: InitConfig): Promise<void> {
@@ -39,5 +39,12 @@ export class AdjustWeb extends WebPlugin implements AdjustPlugin {
       currency,
       callbackParams: Object.entries(parameters).map(([key, value]) => ({ key, value }))
     });
+  }
+
+  async getAdid(): Promise<AdidResult> {
+    const adid = await Adjust.waitForWebUUID();
+    return {
+      adid
+    }
   }
 }
