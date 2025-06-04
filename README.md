@@ -15,6 +15,7 @@ npx cap sync
 
 * [`init(...)`](#init)
 * [`trackEvent(...)`](#trackevent)
+* [`getAdid()`](#getadid)
 * [Interfaces](#interfaces)
 * [Type Aliases](#type-aliases)
 
@@ -53,6 +54,17 @@ track custom event
 --------------------
 
 
+### getAdid()
+
+```typescript
+getAdid() => Promise<AdidResult>
+```
+
+**Returns:** <code>Promise&lt;<a href="#adidresult">AdidResult</a>&gt;</code>
+
+--------------------
+
+
 ### Interfaces
 
 
@@ -79,6 +91,13 @@ adjust custom event options
 | **`parameters`** | <code><a href="#record">Record</a>&lt;string, string&gt;</code> |
 
 
+#### AdidResult
+
+| Prop       | Type                |
+| ---------- | ------------------- |
+| **`adid`** | <code>string</code> |
+
+
 ### Type Aliases
 
 
@@ -86,8 +105,6 @@ adjust custom event options
 
 Construct a type with a set of properties K of type T
 
-<code>{
- [P in K]: T;
- }</code>
+<code>{ [P in K]: T; }</code>
 
 </docgen-api>
