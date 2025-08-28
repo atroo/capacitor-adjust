@@ -1,11 +1,11 @@
-# capacitor-adjust-plugin
+# capacitor-adjust
 
 Adjust Plugins for Capacitor
 
 ## Install
 
 ```bash
-npm install capacitor-adjust-plugin
+npm install @atroo/capacitor-adjust
 npx cap sync
 ```
 
@@ -13,7 +13,7 @@ npx cap sync
 
 <docgen-index>
 
-* [`init(...)`](#init)
+* [`initAdjust(...)`](#initadjust)
 * [`trackEvent(...)`](#trackevent)
 * [`getAdid()`](#getadid)
 * [Interfaces](#interfaces)
@@ -24,10 +24,10 @@ npx cap sync
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### init(...)
+### initAdjust(...)
 
 ```typescript
-init(options: InitConfig) => Promise<void>
+initAdjust(options: InitConfig) => Promise<void>
 ```
 
 adjust init

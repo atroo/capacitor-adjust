@@ -1,4 +1,4 @@
-package com.sgdb.plugins.adjust;
+package de.atroo.plugins.adjust;
 
 import android.util.Log;
 

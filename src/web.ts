@@ -4,7 +4,7 @@ import { WebPlugin } from '@capacitor/core';
 import type {AdidResult, AdjustEventOptions, AdjustPlugin, InitConfig} from './definitions';
 
 export class AdjustWeb extends WebPlugin implements AdjustPlugin {
-  async init(options: InitConfig): Promise<void> {
+  async initAdjust(options: InitConfig): Promise<void> {
     const { appToken, environment = 'production' } = options;
     let {logLevel: logLevelStr} = options
     let logLevel: Adjust.LogLevel | undefined;

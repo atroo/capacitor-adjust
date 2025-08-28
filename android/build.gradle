@@ -21,7 +21,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 android {
-    namespace "com.sgdb.plugins.adjust"
+    namespace "de.atroo.plugins.adjust"
     compileSdk project.hasProperty('compileSdkVersion') ? rootProject.ext.compileSdkVersion : 35
     defaultConfig {
         minSdkVersion project.hasProperty('minSdkVersion') ? rootProject.ext.minSdkVersion : 23

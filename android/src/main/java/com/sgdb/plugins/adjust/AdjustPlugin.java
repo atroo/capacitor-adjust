@@ -1,4 +1,4 @@
-package com.sgdb.plugins.adjust;
+package de.atroo.plugins.adjust;
 
 import android.content.Context;
 
@@ -19,7 +19,7 @@ import java.util.Iterator;
 public class AdjustPlugin extends Plugin {
 
     @PluginMethod
-    public void init(PluginCall call) {
+    public void initAdjust(PluginCall call) {
         String appToken = call.getString("appToken");
         String environment = call.getString("environment");
         String logLevelStr= call.getString("logLevel");

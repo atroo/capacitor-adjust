@@ -26,7 +26,7 @@ export interface AdjustPlugin {
   /**
    * adjust init
    */
-  init(options: InitConfig): Promise<void>;
+  initAdjust(options: InitConfig): Promise<void>;
   /**
    * track custom event
    */
